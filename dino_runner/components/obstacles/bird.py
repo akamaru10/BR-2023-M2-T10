@@ -23,12 +23,8 @@ class Bird(Obstacle):
         if self.rect.x < -self.rect.width:
             obstacles.pop()
 
-
-        if self.step_index >= 10:
+        if self.step_index >= 9:
             self.step_index = 0
 
         self.type = 0 if self.step_index < 5 else 1
         self.step_index += 1
-
-    def draw(self, screen):
-        screen.blit(self.image[self.type], (self.rect.x, self.rect.y))

@@ -41,7 +41,7 @@ class Dinosaur(Sprite):
             self.dino_jump = False
             self.dino_run = True
 
-        if self.step_index >= 10:
+        if self.step_index >= 9:
             self.step_index = 0
 
     def run(self):        
