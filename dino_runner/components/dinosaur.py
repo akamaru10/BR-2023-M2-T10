@@ -8,6 +8,7 @@ Y_POS = 310
 JUMP_VEL = 8.5
 Y_DUNK = 344
 
+
 class Dinosaur(Sprite):
     def __init__(self):
         self.image = RUNNING[0]

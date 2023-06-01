@@ -12,7 +12,7 @@ class ObstacleManager:
 
     def update(self, game):
         if len(self.obstacles) == 0:
-            if random.random() < 0.8:
+            if random.random() < 0.6:
                 self.obstacles.append(Cactus((SMALL_CACTUS + LARGE_CACTUS)))
             else:
                 self.obstacles.append(Bird())
@@ -23,11 +23,14 @@ class ObstacleManager:
                 pygame.time.delay(500)
                 game.playing = False
                 game.death_count += 1
+                self.obstacles.pop()
                 break
+
+    def reset_obstacles(self):
+        self.obstacles = []
 
     def draw(self, screen):
         for obstacle in self.obstacles:
             obstacle.draw(screen) 
             
-    def reset_obstacles(self):
-        self.obstacles = []
+   
