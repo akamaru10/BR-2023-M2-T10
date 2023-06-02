@@ -28,3 +28,5 @@ class Bird(Obstacle):
 
         self.type = 0 if self.step_index < 5 else 1
         self.step_index += 1
+
+        
